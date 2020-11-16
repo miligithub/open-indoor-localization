@@ -93,7 +93,7 @@ if __name__ == '__main__':
     # set filter list here.
     fingerprint.set_filter_mac(None)
     # prepare train and test data, default use wifi data, 'b' if want beacon used
-    fingerprint.prepare_data('train.txt', 'test.txt', 'w')
+    fingerprint.prepare_data('train11_16.txt', 'test11_16.txt', 'w')
     # knn localize and output result.
     result = sklearn_knn(fingerprint.train, fingerprint.test, k=4)
     rmse = sum(result[:, 2]) / float(len(result[:, 2]))
